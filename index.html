@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable = 0, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <title>Apogeo</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/gmv6zbr.css" /> <!-- font Brother 1816 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="videobg">
+            <div class="videobg-width">
+              <div class="videobg-aspect">
+                <div class="videobg-make-height">
+                  <div class="videobg-hide-controls">
+                      <iframe src="https://player.vimeo.com/video/248593831?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="content margin-auto flex-column flex-align-center">
+            <span class="line margin-auto"></span>
+            <h1>
+                <span>Apogeo</span>
+                <img src="images/logo-apogeo.svg" alt="Apogeo">
+            </h1>
+            <div class="text text-center">
+                <h2>FUTURO LANÇAMENTO</h2>
+                <p>
+                    Para mais informações preencha o formulário <br class="only-desktop"> e em breve entraremos em
+                    contato.
+                </p>
+            </div>
+            <div class="form">
+                <div class="flex-between mob-column">
+                    <div class="row size2">
+                        <label class="hold-label">
+                            <span class="float-label">nome</span>
+                            <input type="text" required="" id="nome" name="nome">
+                        </label>
+                    </div>
+                    <div class="row size2">
+                        <label class="hold-label">
+                            <span class="float-label">telefone para contato</span>
+                            <input type="tel" required="" id="telefone" name="telefone" maxlength="15">
+                        </label>
+                    </div>
+                </div>
+                <div class="row size2">
+                    <label class="hold-label">
+                        <span class="float-label">e-mail</span>
+                        <input type="email" required="" id="email" name="email">
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="hold-label">
+                        <span class="float-label">mensagem</span>
+                        <textarea cols="30" rows="1" onkeyup="auto_grow(this)" required="" id="mensagem"
+                            name="mensagem"></textarea>
+                    </label>
+                </div>
+                <input type="submit" value="Enviar" class="button-send button margin-auto" onclick="EnviarFormulario();">
+            </div>
+            <div class="infos">
+                <p class="text-center">
+                    65 3616.7171<br>
+                    AV. MIGUEL SUTIL, 6.344 / EM FRENTE AO PARQUE MÃE BONIFÁCIA / CUIABÁ, MT
+                </p>
+                <a href="https://www.plaenge.com.br/" target="_blank" title="Ir para a Plaenge">
+                    <img src="images/logo-plaenge.svg" alt="Plaenge" class="logo-plaenge">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- <div class="loading-box">
+    <div class="box-image">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div> -->
+</body>
