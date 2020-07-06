@@ -723,6 +723,23 @@ html {
   display: block;
 }
 
+.audio {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 35px;
+  height: 35px;
+  bottom: 50px;
+  left: calc(20px + 2.4%);
+  background: url(../images/sem-audio.png) no-repeat;
+  background-size: 100%;
+}
+
+.audio.muted {
+  background: url(../images/com-audio.png) no-repeat;
+  background-size: 100%;
+}
+
 /* Video background */
 .videobg {
   position: fixed;
@@ -817,6 +834,11 @@ html {
   }
   .infos {
     padding: 3rem 0;
+  }
+  .audio {
+    bottom: unset;
+    top: 20px;
+    z-index: 3;
   }
 }
 /*# sourceMappingURL=style.css.map */

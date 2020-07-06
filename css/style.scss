@@ -91,6 +91,21 @@ html {
         display: block;
     }
 }
+.audio {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 35px;
+    height: 35px;
+    bottom: 50px;
+    left: calc(20px + 2.4%);
+    background: url(../images/sem-audio.png) no-repeat;
+    background-size: 100%;
+    &.muted {
+        background: url(../images/com-audio.png) no-repeat;
+        background-size: 100%;
+    }
+}
 
 /* Video background */
 
@@ -155,35 +170,40 @@ html {
     border: 0 none;
 }
 
-@media screen and (max-width: 1600px){
-    .main{
-        .line{
+@media screen and (max-width: 1600px) {
+    .main {
+        .line {
             height: 5rem;
         }
-        h1{
-            img{
+        h1 {
+            img {
                 margin-bottom: 1rem;
             }
         }
     }
-    .form{
+    .form {
         margin-top: 4rem;
-        label{
+        label {
             margin-bottom: 2rem;
         }
     }
-    .infos{
+    .infos {
         padding-top: 3rem;
     }
 }
 
-@media screen and (max-width: 860px){
-    .form{
-        .row.size2{
+@media screen and (max-width: 860px) {
+    .form {
+        .row.size2 {
             width: 100%;
         }
     }
-    .infos{
-        padding:3rem 0;
+    .infos {
+        padding: 3rem 0;
+    }
+    .audio{
+        bottom: unset;
+        top: 20px;
+        z-index: 3;
     }
 }

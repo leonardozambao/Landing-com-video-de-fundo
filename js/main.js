@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $('.loading-box').fadeOut();
+    $('input[name=telefone]').mask('(00) 0000-00009');
+
+    //background video
     var timeoutId;
     var $videoBgAspect = $(".videobg-aspect");
     var $videoBgWidth = $(".videobg-width");
@@ -23,5 +26,28 @@ $(document).ready(function () {
     $(function () {
         videobgEnlarge();
     });
-
+    var options1 = {
+        height: document.documentElement.clientHeight,
+        width: document.documentElement.clientWidth,
+        muted: 1,
+        autoplay: 1,
+        controls: 0,
+        loop: 1,
+        background: 1,
+    };
+    var selector = 'video1';
+    jQuery('#' + selector).addClass('show');
+    var video1Player = new Vimeo.Player(selector, options1);
+    video1Player.setVolume(0);
+    video1Player.play();
+    $('.audio').click(function () {
+        if (!$('.audio').hasClass('muted')) {
+            video1Player.setVolume(0);
+        }
+        else {
+            video1Player.setVolume(0.5);
+        }
+        $('.audio').toggleClass('muted');
+        return false;
+    })
 })
