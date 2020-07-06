@@ -624,7 +624,6 @@ html {
 
 .main {
   background-color: #222220;
-  min-height: 100vh;
   position: relative;
 }
 
@@ -729,7 +728,7 @@ html {
   position: fixed;
   width: 100%;
   /* Set video container element width here */
-  height: 100%;
+  height: 100vh;
   /* Set video container element height here */
   overflow: hidden;
   background: #111;
@@ -809,6 +808,15 @@ html {
   }
   .infos {
     padding-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .form .row.size2 {
+    width: 100%;
+  }
+  .infos {
+    padding: 3rem 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
