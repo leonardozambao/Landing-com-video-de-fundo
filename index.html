@@ -5,32 +5,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable = 0, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:url" content="" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="" />
+    <meta property="og:title" content="Plaenge - Apogeo" />
+    <meta property="og:description" content="Futuro Lançamento" />
     <title>Apogeo</title>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/gmv6zbr.css" /> <!-- font Brother 1816 -->
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        function taggta() {
+            gtag('event', 'page_view', {
+                'send_to': 'AW-760132135',
+                'user_id': 'replace with value'
+            });
+        }
+        function EnviarFormulario() {
+            $('.button-send').prop("disabled", true);
+            $('.loading-box').fadeIn();
+            $.ajax({
+                url: "https://www.plaenge.com.br/envia_email_hotsite.aspx",
+                data: "{nome:'" + document.getElementById('nome').value + "', email:'" + document.getElementById('email').value + "', telefone:'" + document.getElementById('telefone').value + "', mensagem:'" + document.getElementById('mensagem').value + "', hotsite:'Apogeo', assunto:''}",
+                type: 'POST',
+                crossDomain: true,
+                dataType: 'json',
+                success: function (dados) {
+                    if (dados.sucesso == 1) {
+                        chamatagfaleconosco();
+                        alert(dados.mensagem);
+                        window.location = 'http://www.plaenge.com.br/Apogeo/';
+                    } else {
+                        alert(dados.mensagem);
+                        $('.button-send').prop("disabled", false);
+                        // $('.loading-box').fadeOut();
+                    }
+                }
+            });
+        }
+        function chamatagfaleconosco() {
+            tagfaleconosco.src = "https://servico.addintelligence.com.br/contentserver/Plaenge.cli/CustRel.aspx?canal=MT%20-%20Cuiabá&subcanal=Apogeo&servico=" + document.getElementById('email').value + "&tiporel=2";
+            gtag('event', 'conversion', { 'send_to': 'AW-1039269519/aEn3CM2OlsQBEI_9x-8D' });
+        }
+        function chamatagwhats() {
+            tagwhats.src = "https://servico.addintelligence.com.br/contentserver/Plaenge.cli/CustRel.aspx?canal=MT%20-%20Cuiabá&subcanal=Apogeo&servico=whatsapp&tiporel=144";
+            gtag('event', 'conversion', { 'send_to': 'AW-1039269519/1cVRCOjGkHcQj_3H7wM' });
+        }
+        function chamatagchat() {
+            tagChat.src = "https://servico.addintelligence.com.br/contentserver/Plaenge.cli/CustRel.aspx?canal=MT%20-%20Cuiabá&subcanal=Apogeo&servico=visita&tiporel=5";
+            gtag('event', 'conversion', { 'send_to': 'AW-1039269519/1cVRCOjGkHcQj_3H7wM' });
+        }
+    </script>
+
+    <!--Global site tag(gtag.js) - Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86949765-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-86949765-1');
+    </script>
+
+    <script language="javascript" id="tagseoaddi"
+        src="//servico.addintelligence.com.br/ContentServer/setOrganicTraffic-PlaengeVanguard.min.js?id=Plaenge&iddireto=c8c8fd09-b4b9-475e-acc2-31ec7177adc9&idref=cb8154ab-343d-4406-a923-35b8c6f557f1&idbing=29e03543-b1f2-47e3-977b-3b54a16d9873&idgoogle=779cd966-ecb6-4c4e-87ef-a32291dd2721&idyahoo=89bbf5fd-f1ec-4e09-a759-3989c0ba91b0"
+        async defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 1039269519 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1039269519"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-1039269519');
+    </script>
 </head>
 
 <body>
+    <!-- Global site tag (gtag) - Google Ads: 1039269519 -->
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+        {
+            "vars": {
+                "gtag_id": "AW-1039269519",
+                "config": {
+                    "AW-1039269519": {
+                        "groups": "default"
+                    }
+                }
+            },
+            "triggers": {}
+        }
+    </script>
+    </amp-analytics>
 
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '114804985581977');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=114804985581977&ev=PageView
+&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '224022938896795');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=224022938896795&ev=PageView
+&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- LinkedIn Pixel Code -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "1348169";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";
+            b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })();
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none;" alt=""
+            src="https://px.ads.linkedin.com/collect/?pid=1348169&fmt=gif" />
+    </noscript>
+    <!-- End LinkedIn Pixel Code -->
+
+    <div id="chama_tag" name="chama_tag" style="position: absolute;"></div>
+    <img border='0' id="tagfaleconosco" name="tagfaleconosco" width='1' height='1' style="position: absolute;">
+    <img border='0' id="tagfacebook" name="tagfacebook" width='1' height='1' style="position: absolute;">
+    <img border='0' id="tagwhats" name="tagwhats" width='1' height='1' style="position: absolute;">
+    <img border='0' id="tagChat" name="tagChat" width='1' height='1' style="position: absolute;">
+    <img border='0' id="taginstagram" name="taginstagram" width='1' height='1' style="position: absolute;">
     <main class="main">
+        <a class="audio muted" href="javascript:void(0);" title="Ativar/Desativar aúdio"></a>
         <div class="videobg">
             <div class="videobg-width">
-              <div class="videobg-aspect">
-                <div class="videobg-make-height">
-                  <div class="videobg-hide-controls">
-                      <iframe src="https://player.vimeo.com/video/248593831?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                  </div>
+                <div class="videobg-aspect">
+                    <div class="videobg-make-height">
+                        <div class="videobg-hide-controls">
+                                <div data-vimeo-url="https://player.vimeo.com/video/432867954?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1" id="video1" class="video1"></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
         <div class="content margin-auto flex-column flex-align-center">
             <span class="line margin-auto"></span>
             <h1>
@@ -72,7 +241,8 @@
                             name="mensagem"></textarea>
                     </label>
                 </div>
-                <input type="submit" value="Enviar" class="button-send button margin-auto" onclick="EnviarFormulario();">
+                <input type="submit" value="Enviar" class="button-send button margin-auto"
+                    onclick="EnviarFormulario();">
             </div>
             <div class="infos">
                 <p class="text-center">
@@ -86,14 +256,14 @@
         </div>
     </main>
 
-    <!-- <div class="loading-box">
-    <div class="box-image">
-        <div class="lds-ellipsis">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <div class="loading-box">
+        <div class="box-image">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
-</div> -->
 </body>
